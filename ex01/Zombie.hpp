@@ -1,20 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 21:22:49 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/21 09:15:01 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/11/20 20:15:39 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/11/21 11:18:53 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "Zombie.hpp"
+#ifndef ZOMBIE_HPP
+#define ZOMBIE_HPP
 
-Zombie  *newZombie(std::string name)
+# include <iomanip>
+# include <iostream>
+# include <string>
+# include <cstdlib>
+
+class	Zombie
 {
-    Zombie  *Zombie1 = new Zombie;
-    Zombie1->nommer(name);
-    return (Zombie1);
-}
+    private :
+	std::string	name;
+	
+	public :
+	Zombie();
+	~Zombie();
+    void    announce(void);
+	void	nommer(std::string name);
+};
+
+Zombie	*newZombie(std::string name);
+Zombie* zombieHorde(int N, std::string name);
+
+#endif

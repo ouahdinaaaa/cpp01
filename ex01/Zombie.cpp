@@ -1,20 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/20 21:22:49 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/21 09:15:01 by ayael-ou         ###   ########.fr       */
+/*   Created: 2023/11/20 20:25:04 by ayael-ou          #+#    #+#             */
+/*   Updated: 2023/11/21 12:02:04 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "Zombie.hpp"
 
-Zombie  *newZombie(std::string name)
+Zombie:: Zombie()
 {
-    Zombie  *Zombie1 = new Zombie;
-    Zombie1->nommer(name);
-    return (Zombie1);
+    
+}
+
+Zombie:: ~Zombie()
+{
+    std::cout << "Zombie : " << this->name << " destroyed!" << std::endl;
+}
+
+
+void    Zombie::nommer(std::string name){
+    this->name = name;    
+}
+
+void    Zombie:: announce(void){
+    std::cout << this->name <<": BraiiiiiiinnnzzzZ..." << std::endl;
 }

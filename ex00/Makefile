@@ -6,16 +6,17 @@
 #    By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/20 20:11:24 by ayael-ou          #+#    #+#              #
-#    Updated: 2023/11/20 21:31:30 by ayael-ou         ###   ########.fr        #
+#    Updated: 2023/11/21 09:31:18 by ayael-ou         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = Zombie
 
 SRC_DIR = ./
 SRCS = main.cpp\
 		Zombie.cpp\
 		newZombie.cpp\
+		randomChump.cpp\
 
 OBJS = ${SRCS:.cpp=.o}
 CC = g++

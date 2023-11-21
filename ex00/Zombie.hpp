@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:15:39 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/20 20:56:49 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/21 09:14:31 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ class	Zombie
 	Zombie();
 	~Zombie();
     void    announce(void);
+	void	nommer(std::string name);
 };
 
 Zombie	*newZombie(std::string name);
