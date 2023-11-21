@@ -12,7 +12,7 @@
 
 # include "HumanB.hpp"
 
-HumanB::HumanB(std::string name)
+HumanB::HumanB(std::string name) : name(name), arme("hand")
 {
 }
 
@@ -20,12 +20,11 @@ HumanB::~HumanB()
 {
 }
 
-void    HumanB::attack()
-{
-    std::cout << this->name << "Attack with :" << this->name.getType() << std::endl;
+void HumanB::attack() {
+    std::cout << this->name << " attacks with :" << this->arme.getType() << std::endl;
 }
 
 void    HumanB::setWeapon(Weapon name)
 {
-    this->name = name;
+    this->arme = name;
 }

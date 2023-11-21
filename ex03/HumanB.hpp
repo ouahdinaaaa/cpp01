@@ -24,7 +24,7 @@ class HumanB
 {
     private:
     std::string name;
-    Weapon *arme;
+    Weapon arme;
 
 public:
     

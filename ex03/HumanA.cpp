@@ -12,17 +12,17 @@
 
 # include "HumanA.hpp"
 
-HumanA::HumanA(std::string name, Weapon arme)
-{
+// HumanA::HumanA(std::string name, Weapon arme): name(arme), arme(arme);
+// {
 
-}
+// }
 
-HumanA::~HumanA()
-{
+// HumanA::~HumanA()
+// {
 
-}
+// }
 
-void    HumanA::attack()
-{
-    std::cout << this->name << "Attack with :" << attack this->name.getType() << std::endl;
-}
+// void    HumanA::attack()
+// {
+//     std::cout << this->name << "Attack with :" << this->name.getType() << std::endl;
+// }

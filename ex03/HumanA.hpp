@@ -14,26 +14,22 @@
 # ifndef HUMANA_HPP
 # define HUMANA_HPP
 
-# include <iomanip>
-# include <iostream>
-# include <string>
-# include <cstdlib>
-# include  "Weapon.hpp"
+# include "Weapon.hpp"
 
 
-class HUMANB
-{
-    private :
+// class HUMANA
+// {
+//     private :
     
-    std::string name;
-    Weapon  arme;
+//     std::string name;
+//     Weapon  arme;
 
-    public :
+//     public :
 
-    HumanA(std::string name, Weapon arme);
-    ~HumanA();
-    void    attack();
-    void    setWeapon(Weapon arme);
-}
+//     HumanA(std::string name, Weapon arme);
+//     ~HumanA();
+//     void    attack();
+//     // void    setWeapon(Weapon arme);
+// }
 
 #endif
