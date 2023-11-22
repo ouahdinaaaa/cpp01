@@ -12,8 +12,9 @@
 
 # include "HumanB.hpp"
 
-HumanB::HumanB(std::string name) : name(name), arme("hand")
+HumanB::HumanB(std::string name) : name(name)
 {
+    arme = NULL;
 }
 
 HumanB::~HumanB()
@@ -21,10 +22,14 @@ HumanB::~HumanB()
 }
 
 void HumanB::attack() {
-    std::cout << this->name << " attacks with :" << this->arme.getType() << std::endl;
+    
+    if (this->arme->getType() == "" || !this->arme)
+        std::cout << this->name << " attacks with : Hand" << std::endl;
+    else    
+        std::cout << this->name << " attacks with :" << this->arme->getType() << std::endl;
 }
 
-void    HumanB::setWeapon(Weapon name)
+void    HumanB::setWeapon(Weapon &type)
 {
-    this->arme = name;
+    this->arme = &type;
 }

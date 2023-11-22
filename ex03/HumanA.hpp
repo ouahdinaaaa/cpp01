@@ -17,19 +17,19 @@
 # include "Weapon.hpp"
 
 
-// class HUMANA
-// {
-//     private :
+class HumanA
+{
+    private :
     
-//     std::string name;
-//     Weapon  arme;
+    Weapon  *arme;
+    std::string name;
 
-//     public :
+    public :
 
-//     HumanA(std::string name, Weapon arme);
-//     ~HumanA();
-//     void    attack();
-//     // void    setWeapon(Weapon arme);
-// }
+    HumanA(std::string name, Weapon &arme);
+    ~HumanA();
+    void    attack();
+    void    setWeapon(Weapon &arme);
+};
 
 #endif

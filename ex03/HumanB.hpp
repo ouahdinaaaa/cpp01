@@ -23,15 +23,15 @@
 class HumanB
 {
     private:
+    Weapon *arme;
     std::string name;
-    Weapon arme;
 
 public:
     
-    HumanB(std::string name);
+    HumanB(std::string type);
     ~HumanB();
     void    attack();
-    void    setWeapon(Weapon arme);
+    void    setWeapon(Weapon &arme);
 };
 
 

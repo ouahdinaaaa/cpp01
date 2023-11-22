@@ -12,17 +12,25 @@
 
 # include "HumanA.hpp"
 
-// HumanA::HumanA(std::string name, Weapon arme): name(arme), arme(arme);
-// {
+HumanA::HumanA(std::string name, Weapon &arme): name(name)
+{
+        this->arme = &arme;
+}
 
-// }
+HumanA::~HumanA()
+{
 
-// HumanA::~HumanA()
-// {
+}
 
-// }
+void    HumanA::attack()
+{
+    if (this->arme->getType() == "")
+        std::cout << this->name << "Attack with : hand" << std::endl;
+    else
+        std::cout << this->name << "Attack with : " << this->arme->getType() << std::endl;
+}
 
-// void    HumanA::attack()
-// {
-//     std::cout << this->name << "Attack with :" << this->name.getType() << std::endl;
-// }
+void    HumanA::setWeapon(Weapon &arme)
+{
+    this->arme = &arme;
+}
