@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 15:16:50 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/22 16:51:03 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/11/23 04:12:01 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,16 @@
 
 std::string modification(std::string line, std::string s1, std::string s2)
 {
-    size_t      pos;
+    size_t      pos = line.find(s1);
     size_t      len;
 
-    len = line.length();
-    pos = line.find(s2);
-    line.erase(pos, len);
-    line.insert(pos, s2);
-    
+    len = s1.length();
+    while (pos != std::string::npos)
+    {
+        line.erase(pos, len);
+        line.insert(pos, s2);
+        pos = line.find(s1, pos + s2.length());
+    }
     return line;
 }
 
@@ -49,14 +51,11 @@ int main(int argc, char **argv)
         return (std::cout << "Error of file" << std::endl, 1);
     while (std::getline(fd, line))
     {
-        line = modification(line, s1, s2);
-        std::cout << "line recuperer : " << line << std::endl;
+        if (!line.empty())
+            line = modification(line, s1, s2);
+        fd1 << line << std::endl;
     }
     fd.close();
     fd1.close();
     return (0);
 }
-
-// erase
-// insert
-// find
