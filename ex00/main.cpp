@@ -6,7 +6,7 @@
 /*   By: ayael-ou <ayael-ou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 20:32:26 by ayael-ou          #+#    #+#             */
-/*   Updated: 2023/11/21 09:32:53 by ayael-ou         ###   ########.fr       */
+/*   Updated: 2023/12/22 12:31:29 by ayael-ou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int main(int argc, char **argv)
 {
+    (void)argv;
     if (argc != 1)
         return (std::cout << "Error of Argument\n", 1);
     

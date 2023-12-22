@@ -14,8 +14,8 @@
 
 void    randomChump(std::string name)
 {
-    Zombie Zombie1;
+    Zombie zombie1;
 
-    Zombie1.nommer(name);
-    Zombie1.announce();
+    zombie1.nommer(name);
+    zombie1.announce();
 }
